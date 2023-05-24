@@ -1,0 +1,401 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>jQuery UI </title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.hotkeys/0.2.0/jquery.hotkeys.min.js"></script>
+    <!--  <link rel=""> -->
+    <link rel="icon" href="https://www.python.org/static/favicon.ico">
+    <style type="text/css">
+      @font-face {
+        font-family: "dyslexic";
+        src: url(https://github.com/PythonGithCode/fonts/raw/main/OpenDyslexic-Regular.ttf) format("truetype");
+      }
+
+      .dis {
+        font-family: "dyslexic", Verdana, Tahoma;
+      }
+
+    </style>
+    
+    <!-- <link rel="stylesheet" href="https://opendyslexic.org/files/css/css_TCx_XEiAk351K0xYJfKNAVZwNewqENNciS4azCNnLDg.css" media="all">
+    <link rel="stylesheet" href="https://opendyslexic.org/files/css/css_TBn-BjrCDi3jk3U9WMNARltRG_c22C5Art6X1mc8f5A.css" media="all">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" media="all">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/3.3.5/cerulean/bootstrap.min.css" media="all">
+    <link rel="stylesheet" href="https://opendyslexic.org/files/css/css_47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU.css" media="all">
+    <link rel="stylesheet" href="https://opendyslexic.org/files/css/css_TF-MkTX-mUeynlfhKX1Qj34E5QjSpEyonY9GIn8dVPM.css" media="all">
+    <link rel="stylesheet" href="https://opendyslexic.org/files/css/css_xaJU72jAuGdwaW-AT8DAVp4DqDeKRUXAJArM-ju9zyk.css" media="all">
+    <link rel="stylesheet" href="https://opendyslexic.org/files/css/css_eOA_3TRBzYHgMD3IIyWkxb70wwzOaPschjMlH-WxtiY.css" media="all"> -->
+  </head>
+
+  <body>
+
+    <!-- D.N.D. -->
+    <div hidden>
+
+      <div>
+        <h1>
+          DND player
+        </h1>
+
+        <!-- Pick a player -->
+        <div>
+          <span>Name: </span>
+          <input type="name" class="ui-input" id="namePlayer">
+          <button id="findPlayer" class="ui-button">Find</button>
+
+          <div>
+            <!-- <h3>
+              <span>Name:</span>
+              <span id="playerName">temp</span>
+            </h3> -->
+            <div>
+              <h4>Data:</h4>
+              <textarea class="playerDataJson" id="playerDataJson"></textarea>
+              <!-- <pre class="playerDataJson" id="playerDataJson"></pre> -->
+            </div>
+            <div>
+              <button class="ui-button" id="savePlayerData">Save Data</button>
+              <p class="did-save"></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- beta character thing -->
+        <div class="betaCharacter" id="betaCharacter">
+          <hr>
+
+          <h3>Kadden</h3>
+          <div>
+
+            <div id="playerHealthStat">
+              <p>
+                <span>Health</span>:
+                <span id="playerHealthStatValue">7</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- dyslexia -->
+    <div>
+      <div>
+        <p>
+          script ideas:
+          <br>
+          <br>
+          1.<br>
+          Hello i'm logan, this is my pesation on dyslexia.
+          <br>
+          To start, what is dyslexia?
+          <br>
+          Dyslexia is "typically recognized as a specific learning disorder in children."
+          <br>
+          How does it affect people?
+          <br>
+          It affects people's reading, speach, spelling, and learning.
+          <br>
+          People with dyslexia have a harding when learning a second Language.
+          <br>
+          This means that if someone you know has it might have had a harder time learn the language their taking.
+
+
+        </p>
+
+        <br>
+        <br>
+        <br>
+      </div>
+
+      <div>
+
+        <h1>
+          Dyslexia
+        </h1>
+
+        <hr>
+
+        <h3>
+          Definition
+        </h3>
+        <h5>
+          A condition of neurodevelopmental origin that mainly affects the ease with which a person reads, writes, and spells, typically recognized as a specific learning disorder in children.
+        </h5>
+
+        <hr>
+
+        <h3>
+          What is it?
+        </h3>
+
+        <p>
+          Dyslexia is a neurological Condition that affects people
+          reading, speach, and learning.
+        </p>
+
+        <div>
+
+          <div>
+            <p>20% of people have Dyslexia</p>
+            <img width="400" height="200" src="https://lh3.googleusercontent.com/u/0/drive-viewer/AFGJ81qT7xJXASmc9p9bBtcaDWswHXwxNyWPLfETLP26vFtuEW5IIGEe48xo1bL_i47Avki4HubDxvfJUfWYOS0808rlNXahwQ=w696-h624">
+          </div>
+
+          <li>
+            Language
+            <span class="hiddenLater"><br> -
+              Dyslexia make it harder for people to learn
+              a second language.
+            </span>
+          </li>
+
+          <br>
+
+          <li>
+            Reading
+            <span class="hiddenLater"><br> -
+              It also make's it difficault to read which make's them slower readers.
+            </span>
+          </li>
+
+          <br>
+
+          <li>
+            Intellect
+            <span class="hiddenLater"><br> -
+              What Dyslexia doesn't do is affect their intellegents
+            </span>
+          </li>
+        </div>
+
+        <br>
+        <hr>
+
+        <h2>
+          Famous people who have dealt with Dyslexia.
+        </h2>
+        <div>
+          <h3>
+            Albert Einstein
+          </h3>
+          <img width=220 height=289 src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Einstein_1921_by_F_Schmutzer_-_restoration.jpg/330px-Einstein_1921_by_F_Schmutzer_-_restoration.jpg">
+          <p class="hiddenLater">
+            Though as a child and teenager, Albert Einstein had shown signs of weakness in speech and verbal development.
+            “Words or language, as they are written or spoken, do not seem to play any role in my mechanism of thought,” he wrote to mathematician Jacques Hadamard in 1945.
+          </p>
+        </div>
+
+        <hr>
+
+        <div>
+          <h3>
+            Richard Branson
+          </h3>
+          <img width=220 height=289 src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Richard_Branson_March_2015_%28cropped%29.jpg/330px-Richard_Branson_March_2015_%28cropped%29.jpg">
+          <p class="hiddenLater">
+            Richard Branson, exprenace with dyslexia made him think in diffrent ways which helped him in later life.
+            “It is time we lost the stigma around dyslexia,” Branson said. “It is not a disadvantage; it is merely a different way of thinking.”
+            “Once freed from archaic schooling practices and preconceptions, my mind opened up. Out in the real world, my dyslexia became my massive advantage: it helped me to think creatively and laterally, and see solutions where others saw problems.”
+            He says he also wants to make sure that school toady will have the tool to help people with dyslexia.
+          </p>
+        </div>
+
+        <hr>
+
+        <div>
+          <h3>
+            George Washington
+          </h3>
+          <img width=220 height=289 src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Gilbert_Stuart_Williamstown_Portrait_of_George_Washington.jpg/330px-Gilbert_Stuart_Williamstown_Portrait_of_George_Washington.jpg">
+          <p class="hiddenLater">
+            George Washington had issues with grammer and reading likely from Dyslexia.
+            So he made ways for him to understand it for himself.
+          </p>
+        </div>
+
+
+        <hr>
+
+        <div>
+          <h3>
+            Henry Winkler
+          </h3>
+          <img width=220 height=289 src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Henry_Winkler_%2843968252532%29.jpg/330px-Henry_Winkler_%2843968252532%29.jpg">
+          <p class="hiddenLater">
+            Henty Winkler said that Dyslexia made him not read a but tell 31.
+            When he was younger not alot was really known about Dyslexia which made it hard for him.
+            “I learned to memorize as much as I could from any page and then improvise,” he said.
+            Now he wants to make sure that people today in school should have tools to help them with Dyslexia.
+          </p>
+        </div>
+
+
+        <hr>
+
+        <div>
+          <h3>
+            Octavia Spencer
+          </h3>
+          <img width=220 height=289 src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/%22Hidden_Figures%22_Screening_at_the_White_House_%28NHQ201612150008%29_%28cropped%29.jpg/330px-%22Hidden_Figures%22_Screening_at_the_White_House_%28NHQ201612150008%29_%28cropped%29.jpg">
+          <p class="hiddenLater">
+            George Washington had issues with grammer and reading likely from Dyslexia.
+            So he made ways for him to understand it for himself.
+          </p>
+        </div>
+
+      </div>
+
+      <hr>
+
+      <div>
+        <h2 class="dis">
+          Tools to help people with dyslexia
+        </h2>
+      </div>
+      <br>
+      <br>
+      <br>
+      <br>
+      <cite>
+        BLANK TEXT FOR CITE
+      </cite>
+    </div>
+
+    <div hidden>
+      <div id="wordsCountThing">
+        <span>Count: </span>
+        <input id="numbers" value="1">
+      </div>
+
+      <div class="Randomize">
+        <p>Words are fun to say.!</p>
+        <p>Matthew call spell the themerom right or left i think yeas or no works are fast left up down geomerty is fun something we probly we work on [rojects for unit L no note or test project durning class he will colect them there is one grade for unit L there is 4 projects the first on is the loingest in like 1.5 class prioeds wounts turndn it you get the review packet is all projects down. this is to show that we can still to make, if we do well an the final that is good the grades.</p>
+        <span class="hamed">hamburg</span>
+      </div>
+
+      <div>
+        <div>
+          <p class="RandomizeV2">Words are good</p>
+        </div>
+      </div>
+
+      <div hidden class="ui-widget-content">
+        <p>T&#x948;est&#x300;</p>
+      </div>
+    </div>
+
+    <div hidden id="notes">
+      <div id="q1">
+        <h3>Question 1</h3>
+        <p>30 x 25 feet,</p>
+        <p>750 feet<sup>2</sup></p>
+        <p>
+          per 1 squert foot is $3.49
+        </p>
+        <p>Total cost would be 3.49*750 = 2,617.5</p>
+      </div>
+      <div id="q2">
+        <h3>Question 2.</h3>
+        <p>over 10% more.</p>
+        <p>$2,617.5*1.1 = $2879.2500000000005</p>
+        <p></p>
+        <p></p>
+        <p></p>
+      </div>
+      <div id="q3">
+        <h3>Question 3.</h3>
+        <p>h = 12 feet, one gallon of paint covers 450 ft<sup>2</sup> and cost 26.96</p>
+        <p>(2*(12*25) + 2*(12*30)) = 1320 ft<sup>2</sup>, of walls</p>
+        <p>(1320/450) = 3 <br> (3 * 26.96) = $80.88</p>
+      </div>
+      <div id="q4">
+        <h3>Question 4.</h3>
+        <p></p>
+      </div>
+      <div id="q5">
+        <h3>Question 5.</h3>
+        <p></p>
+        <p></p>
+        <p></p>
+      </div>
+      <div id="q6">
+        <h3>Question 6.</h3>
+        <p></p>
+        <p></p>
+        <p></p>
+      </div>
+    </div>
+
+    <div hidden id="gameDrop">
+      <div id="gameDropStats">
+        <p id="gameDropStatsText">
+          X: '<span id="gameDropX"></span>',
+          Y: '<span id="gameDropY"></span>',
+          Wins: '<span id="gameDropWins"></span>'.
+        </p>
+      </div>
+      <div id="gameDropArea" class="area-drop">
+
+        <div id="box">
+          <p class="inside-box">Win</p>
+        </div>
+
+        <div class="gameDropButtons" id="gameDropButtons">
+          <button class="ah-u ui-button" id="gameDropButtonDOWN">
+            DOWN
+          </button>
+          <button class="ah-d ui-button" id="gameDropButtonUP">
+            UP
+          </button>
+          <button class="ah-l ui-button" id="gameDropButtonLEFT">
+            LEFT
+          </button>
+          <button class="ah-r ui-button" id="gameDropButtonRIGHT">
+            RIGHT
+          </button>
+        </div>
+
+        <!-- no longer used, cus it was bad-->
+        <!--
+        <div hidden>
+          <link href="./home.css" rel="stylesheet" />
+          <div class="home-container">
+            <button class="home-button button">
+              <span class="home-text">RIGHT</span>
+            </button>
+        
+            <button class="home-button1 button">
+              <span class="home-text1">UP</span>
+            </button>
+        
+            <button class="home-button2 button">
+              <span class="home-text2">LEFT</span>
+            </button>
+        
+            <button class="home-button3 button">
+              <span class="home-text3">DOWN</span>
+            </button>
+        
+            <div class="home-container1"></div>
+        
+            <div class="textarea home-textarea"></div>
+          </div>
+        </div>
+        -->
+      </div>
+    </div>
+  </body>
+
+</html>
+<!-- <div id="banner-message">
+  <p>Hello World</p>
+  <button>Change color</button>
+</div>
+ -->
