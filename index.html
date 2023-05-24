@@ -11,19 +11,351 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.hotkeys/0.2.0/jquery.hotkeys.min.js"></script>
     <!--  <link rel=""> -->
     <link rel="icon" href="https://www.python.org/static/favicon.ico">
-    <link rel="stylesheet" href="https://github.com/PythonGithCode/PythonGithCode/raw/main/style.css">
+    <link rel="stylesheet" href="https://raw.githubusercontent.com/PythonGithCode/PythonGithCode/main/style.css">
     <style type="text/css">
+      /* root don't change */
+      :root {
+        --blue2: #1e90ff;
+        --white2: #ffffff;
+      }
+
       @font-face {
+        font-family: "dyslexic";
+        src: url(https://github.com/PythonGithCode/fonts/raw/main/OpenDyslexic-Regular.ttf);
+      }
+
+      * {
+        font-family: dyslexic !important;
+      }
+
+      /* 
+* {
+  font-size: 20px;
+  line-height: 200%;
+  font-family: opendyslexic !important;
+} */
+
+      /* .dis {
+  font-family: clfallback,oda,comic sans ms,sans-serif;
+}
+ */
+      .failed {
+        color: red;
+      }
+
+      .successful {
+        color: green;
+      }
+
+      #did-save {
+        display: show;
+      }
+
+      .playerDataJson {
+        background-color: #2e3742;
+        color: white;
+      }
+
+
+      .betaCharacter {
+        color: red;
+      }
+
+      #betaCharacter {
+        display: none;
+      }
+
+
+      .hiddenLater {
+        display: show;
+      }
+
+
+      .gameDropButtons {
+        background-color: red;
+        align-content: center;
+        top: 27.31em;
+        /* left: 0em; */
+        position: absolute;
+
+      }
+
+
+
+      .inside-box {
+        width: 10vh;
+        /* change this */
+        height: 10vh;
+        text-align: center;
+        flex-wrap: wrap;
+        align-content: center;
+        background-color: #79adf2;
+      }
+
+
+      .area-drop {
+        background-color: #4c5f78;
+        width: 350px;
+        height: 400px;
+      }
+
+      .home-container {
+        width: 600px;
+        height: 800px;
+        display: flex;
+        overflow: auto;
+        min-height: 100vh;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .home-button {
+        display: flex;
+        flex-direction: row;
+      }
+
+      .home-button1 {
+        display: flex;
+        flex-direction: row;
+      }
+
+      .home-button2 {
+        display: flex;
+        flex-direction: row;
+      }
+
+      .home-button3 {
+        display: flex;
+        flex-direction: row;
+      }
+
+      .home-container1 {
+        flex: 0 0 auto;
+        width: 100%;
+        border: 2px dashed rgba(120, 120, 120, 0.4);
+        height: 100px;
+        display: flex;
+        align-items: flex-start;
+      }
+
+      @media (max-width: 600px) {
+        .home-button {
+          top: 608px;
+          right: 24px;
+          width: 263px;
+          height: 76px;
+          padding: var(--dl-space-space-halfunit);
+          position: absolute;
+          text-align: center;
+          line-height: 1;
+          margin-left: 0px;
+          margin-right: 0px;
+          letter-spacing: 20px;
+        }
+
+        .home-text {
+          top: 18px;
+          left: 70px;
+          width: auto;
+          height: auto;
+          position: absolute;
+          font-size: 40px;
+          letter-spacing: 2px;
+        }
+
+        .home-button1 {
+          top: 523px;
+          left: 119px;
+          width: 360px;
+          height: 76px;
+          padding: var(--dl-space-space-halfunit);
+          position: absolute;
+          text-align: center;
+          line-height: 1;
+          margin-left: 0px;
+          margin-right: 0px;
+          letter-spacing: 20px;
+        }
+
+        .home-text1 {
+          top: 17px;
+          left: 167px;
+          width: auto;
+          height: auto;
+          position: absolute;
+          font-size: 40px;
+          letter-spacing: 2px;
+        }
+
+        .home-button2 {
+          top: 607px;
+          left: 41px;
+          width: 263px;
+          height: 76px;
+          padding: var(--dl-space-space-halfunit);
+          position: absolute;
+          text-align: center;
+          line-height: 1;
+          margin-left: 0px;
+          margin-right: 0px;
+          letter-spacing: 20px;
+        }
+
+        .home-text2 {
+          top: 19px;
+          left: 80px;
+          width: auto;
+          height: auto;
+          position: absolute;
+          font-size: 40px;
+          letter-spacing: 2px;
+        }
+
+        .home-button3 {
+          left: 121px;
+          width: 360px;
+          bottom: 33px;
+          height: 76px;
+          padding: var(--dl-space-space-halfunit);
+          position: absolute;
+          text-align: center;
+          line-height: 1;
+          margin-left: 0px;
+          margin-right: 0px;
+          letter-spacing: 20px;
+        }
+
+        .home-text3 {
+          top: 16px;
+          left: 119px;
+          width: auto;
+          bottom: 15px;
+          height: auto;
+          position: absolute;
+          font-size: 40px;
+          letter-spacing: 2px;
+        }
+
+        .home-container1 {
+          top: 454px;
+          right: -3px;
+          height: 0px;
+          position: absolute;
+        }
+
+        .home-textarea {
+          top: 214px;
+          left: 191px;
+          width: 120px;
+          height: 120px;
+          position: absolute;
+        }
+      }
+
+      @media (max-width: 500px) {
+        .home-container {
+          border-color: var(--dl-color-gray-black);
+          border-width: 1px;
+        }
+      }
+
+
+
+      body {
+        background: #20262E;
+        padding: 10px;
+        font-family: Helvetica;
+      }
+
+      div {
+        color: #ddd;
+      }
+
+      #banner-message {
+        background: #fff;
+        border-radius: 4px;
+        padding: 20px;
+        font-size: 25px;
+        text-align: center;
+        transition: all 0.2s;
+        margin: 0 auto;
+        width: 300px;
+      }
+
+      button {
+        background: #0084ff;
+        border: none;
+        border-radius: 5px;
+        padding: 8px 14px;
+        font-size: 15px;
+        color: #fff;
+      }
+
+      #banner-message.alt {
+        background: #0084ff;
+        color: #fff;
+        margin-top: 40px;
+        width: 200px;
+      }
+
+      #banner-message.alt button {
+        background: #fff;
+        color: #000;
+      }
+
+
+
+      /*
+other stuff
+@media {
+  .ah-r {
+    background-color: blue;
+    top: 350px;
+    right: 12em;
+    position: absolute;
+  }
+
+  .ah-r:focus {
+    background-color: ;
+  }
+
+  .ah-d {
+    background-color: yellow;
+    top: 20em;
+    left: 4em;
+    position: absolute;
+
+  }
+
+  .ah-u {
+    background-color: green;
+    top: 25em;
+    left: 8.75em;
+    position: absolute;
+  }
+
+  .ah-l {
+    background-color: pink;
+    top: 250px;
+    right: 28em;
+    position: absolute;
+  }
+}
+
+*/
+
+      /* @font-face {
         font-family: "dyslexic";
         src: url(https://github.com/PythonGithCode/fonts/raw/main/OpenDyslexic-Regular.ttf) format("truetype");
       }
-
+      
       .dis {
         font-family: "dyslexic", Verdana, Tahoma;
-      }
+      } */
 
     </style>
-    
+
     <!-- <link rel="stylesheet" href="https://opendyslexic.org/files/css/css_TCx_XEiAk351K0xYJfKNAVZwNewqENNciS4azCNnLDg.css" media="all">
     <link rel="stylesheet" href="https://opendyslexic.org/files/css/css_TBn-BjrCDi3jk3U9WMNARltRG_c22C5Art6X1mc8f5A.css" media="all">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" media="all">
