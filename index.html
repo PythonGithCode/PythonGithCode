@@ -11,302 +11,323 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.hotkeys/0.2.0/jquery.hotkeys.min.js"></script>
     <!--  <link rel=""> -->
     <link rel="icon" href="https://www.python.org/static/favicon.ico">
-    <link rel="stylesheet" href="https://raw.githubusercontent.com/PythonGithCode/PythonGithCode/main/style.css">
-    <style type="text/css">
-      /* root don't change */
-      :root {
-        --blue2: #1e90ff;
-        --white2: #ffffff;
-      }
 
-      @font-face {
-        font-family: "dyslexic";
-        src: url(https://github.com/PythonGithCode/fonts/raw/main/OpenDyslexic-Regular.ttf);
-      }
+    <!-- dyslecix -->
+    <!-- <link rel="stylesheet" href="https://raw.githubusercontent.com/PythonGithCode/PythonGithCode/main/style.css"> -->
+    <style>
+    /* root don't change */
+:root {
+  --blue2: #1e90ff;
+  --white2: #ffffff;
+}
 
-      * {
-        font-family: dyslexic !important;
-      }
+.img2 {
+  float: left;
+}
 
-      /* 
+.img3 {
+  
+  float: right;
+}
+
+.text2 {
+  
+  float: left;
+}
+
+.container3 {
+    align-items: center;
+    justify-content: center;
+  }
+
+/* @font-face {
+  font-family: "dyslexic";
+  src: url(https://github.com/PythonGithCode/fonts/raw/main/OpenDyslexic-Regular.ttf) ;
+}
+
+* {
+  font-family: dyslexic !important;
+} */
+
+/* 
 * {
   font-size: 20px;
   line-height: 200%;
   font-family: opendyslexic !important;
 } */
 
-      /* .dis {
+/* .dis {
   font-family: clfallback,oda,comic sans ms,sans-serif;
 }
  */
-      .failed {
-        color: red;
-      }
+.failed {
+  color: red;
+}
 
-      .successful {
-        color: green;
-      }
+.successful {
+  color: green;
+}
 
-      #did-save {
-        display: show;
-      }
+#did-save {
+  display: show;
+}
 
-      .playerDataJson {
-        background-color: #2e3742;
-        color: white;
-      }
-
-
-      .betaCharacter {
-        color: red;
-      }
-
-      #betaCharacter {
-        display: none;
-      }
+.playerDataJson {
+  background-color: #2e3742;
+  color: white;
+}
 
 
-      .hiddenLater {
-        display: show;
-      }
+.betaCharacter {
+  color: red;
+}
+
+#betaCharacter {
+  display: none;
+}
 
 
-      .gameDropButtons {
-        background-color: red;
-        align-content: center;
-        top: 27.31em;
-        /* left: 0em; */
-        position: absolute;
-
-      }
+.hiddenLater {
+  display: show;
+}
 
 
+.gameDropButtons {
+  background-color: red;
+  align-content: center;
+  top: 27.31em;
+  /* left: 0em; */
+  position: absolute;
 
-      .inside-box {
-        width: 10vh;
-        /* change this */
-        height: 10vh;
-        text-align: center;
-        flex-wrap: wrap;
-        align-content: center;
-        background-color: #79adf2;
-      }
-
-
-      .area-drop {
-        background-color: #4c5f78;
-        width: 350px;
-        height: 400px;
-      }
-
-      .home-container {
-        width: 600px;
-        height: 800px;
-        display: flex;
-        overflow: auto;
-        min-height: 100vh;
-        align-items: center;
-        flex-direction: column;
-        justify-content: center;
-      }
-
-      .home-button {
-        display: flex;
-        flex-direction: row;
-      }
-
-      .home-button1 {
-        display: flex;
-        flex-direction: row;
-      }
-
-      .home-button2 {
-        display: flex;
-        flex-direction: row;
-      }
-
-      .home-button3 {
-        display: flex;
-        flex-direction: row;
-      }
-
-      .home-container1 {
-        flex: 0 0 auto;
-        width: 100%;
-        border: 2px dashed rgba(120, 120, 120, 0.4);
-        height: 100px;
-        display: flex;
-        align-items: flex-start;
-      }
-
-      @media (max-width: 600px) {
-        .home-button {
-          top: 608px;
-          right: 24px;
-          width: 263px;
-          height: 76px;
-          padding: var(--dl-space-space-halfunit);
-          position: absolute;
-          text-align: center;
-          line-height: 1;
-          margin-left: 0px;
-          margin-right: 0px;
-          letter-spacing: 20px;
-        }
-
-        .home-text {
-          top: 18px;
-          left: 70px;
-          width: auto;
-          height: auto;
-          position: absolute;
-          font-size: 40px;
-          letter-spacing: 2px;
-        }
-
-        .home-button1 {
-          top: 523px;
-          left: 119px;
-          width: 360px;
-          height: 76px;
-          padding: var(--dl-space-space-halfunit);
-          position: absolute;
-          text-align: center;
-          line-height: 1;
-          margin-left: 0px;
-          margin-right: 0px;
-          letter-spacing: 20px;
-        }
-
-        .home-text1 {
-          top: 17px;
-          left: 167px;
-          width: auto;
-          height: auto;
-          position: absolute;
-          font-size: 40px;
-          letter-spacing: 2px;
-        }
-
-        .home-button2 {
-          top: 607px;
-          left: 41px;
-          width: 263px;
-          height: 76px;
-          padding: var(--dl-space-space-halfunit);
-          position: absolute;
-          text-align: center;
-          line-height: 1;
-          margin-left: 0px;
-          margin-right: 0px;
-          letter-spacing: 20px;
-        }
-
-        .home-text2 {
-          top: 19px;
-          left: 80px;
-          width: auto;
-          height: auto;
-          position: absolute;
-          font-size: 40px;
-          letter-spacing: 2px;
-        }
-
-        .home-button3 {
-          left: 121px;
-          width: 360px;
-          bottom: 33px;
-          height: 76px;
-          padding: var(--dl-space-space-halfunit);
-          position: absolute;
-          text-align: center;
-          line-height: 1;
-          margin-left: 0px;
-          margin-right: 0px;
-          letter-spacing: 20px;
-        }
-
-        .home-text3 {
-          top: 16px;
-          left: 119px;
-          width: auto;
-          bottom: 15px;
-          height: auto;
-          position: absolute;
-          font-size: 40px;
-          letter-spacing: 2px;
-        }
-
-        .home-container1 {
-          top: 454px;
-          right: -3px;
-          height: 0px;
-          position: absolute;
-        }
-
-        .home-textarea {
-          top: 214px;
-          left: 191px;
-          width: 120px;
-          height: 120px;
-          position: absolute;
-        }
-      }
-
-      @media (max-width: 500px) {
-        .home-container {
-          border-color: var(--dl-color-gray-black);
-          border-width: 1px;
-        }
-      }
+}
 
 
 
-      body {
-        background: #20262E;
-        padding: 10px;
-        font-family: Helvetica;
-      }
-
-      div {
-        color: #ddd;
-      }
-
-      #banner-message {
-        background: #fff;
-        border-radius: 4px;
-        padding: 20px;
-        font-size: 25px;
-        text-align: center;
-        transition: all 0.2s;
-        margin: 0 auto;
-        width: 300px;
-      }
-
-      button {
-        background: #0084ff;
-        border: none;
-        border-radius: 5px;
-        padding: 8px 14px;
-        font-size: 15px;
-        color: #fff;
-      }
-
-      #banner-message.alt {
-        background: #0084ff;
-        color: #fff;
-        margin-top: 40px;
-        width: 200px;
-      }
-
-      #banner-message.alt button {
-        background: #fff;
-        color: #000;
-      }
+.inside-box {
+  width: 10vh;
+  /* change this */
+  height: 10vh;
+  text-align: center;
+  flex-wrap: wrap;
+  align-content: center;
+  background-color: #79adf2;
+}
 
 
+.area-drop {
+  background-color: #4c5f78;
+  width: 350px;
+  height: 400px;
+}
 
-      /*
+.home-container {
+  width: 600px;
+  height: 800px;
+  display: flex;
+  overflow: auto;
+  min-height: 100vh;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.home-button {
+  display: flex;
+  flex-direction: row;
+}
+
+.home-button1 {
+  display: flex;
+  flex-direction: row;
+}
+
+.home-button2 {
+  display: flex;
+  flex-direction: row;
+}
+
+.home-button3 {
+  display: flex;
+  flex-direction: row;
+}
+
+.home-container1 {
+  flex: 0 0 auto;
+  width: 100%;
+  border: 2px dashed rgba(120, 120, 120, 0.4);
+  height: 100px;
+  display: flex;
+  align-items: flex-start;
+}
+
+@media (max-width: 600px) {
+  .home-button {
+    top: 608px;
+    right: 24px;
+    width: 263px;
+    height: 76px;
+    padding: var(--dl-space-space-halfunit);
+    position: absolute;
+    text-align: center;
+    line-height: 1;
+    margin-left: 0px;
+    margin-right: 0px;
+    letter-spacing: 20px;
+  }
+
+  .home-text {
+    top: 18px;
+    left: 70px;
+    width: auto;
+    height: auto;
+    position: absolute;
+    font-size: 40px;
+    letter-spacing: 2px;
+  }
+
+  .home-button1 {
+    top: 523px;
+    left: 119px;
+    width: 360px;
+    height: 76px;
+    padding: var(--dl-space-space-halfunit);
+    position: absolute;
+    text-align: center;
+    line-height: 1;
+    margin-left: 0px;
+    margin-right: 0px;
+    letter-spacing: 20px;
+  }
+
+  .home-text1 {
+    top: 17px;
+    left: 167px;
+    width: auto;
+    height: auto;
+    position: absolute;
+    font-size: 40px;
+    letter-spacing: 2px;
+  }
+
+  .home-button2 {
+    top: 607px;
+    left: 41px;
+    width: 263px;
+    height: 76px;
+    padding: var(--dl-space-space-halfunit);
+    position: absolute;
+    text-align: center;
+    line-height: 1;
+    margin-left: 0px;
+    margin-right: 0px;
+    letter-spacing: 20px;
+  }
+
+  .home-text2 {
+    top: 19px;
+    left: 80px;
+    width: auto;
+    height: auto;
+    position: absolute;
+    font-size: 40px;
+    letter-spacing: 2px;
+  }
+
+  .home-button3 {
+    left: 121px;
+    width: 360px;
+    bottom: 33px;
+    height: 76px;
+    padding: var(--dl-space-space-halfunit);
+    position: absolute;
+    text-align: center;
+    line-height: 1;
+    margin-left: 0px;
+    margin-right: 0px;
+    letter-spacing: 20px;
+  }
+
+  .home-text3 {
+    top: 16px;
+    left: 119px;
+    width: auto;
+    bottom: 15px;
+    height: auto;
+    position: absolute;
+    font-size: 40px;
+    letter-spacing: 2px;
+  }
+
+  .home-container1 {
+    top: 454px;
+    right: -3px;
+    height: 0px;
+    position: absolute;
+  }
+
+  .home-textarea {
+    top: 214px;
+    left: 191px;
+    width: 120px;
+    height: 120px;
+    position: absolute;
+  }
+}
+
+@media (max-width: 500px) {
+  .home-container {
+    border-color: var(--dl-color-gray-black);
+    border-width: 1px;
+  }
+}
+
+
+
+body {
+  background: #20262E;
+  padding: 10px;
+  font-family: Helvetica;
+}
+
+div {
+  color: #ddd;
+}
+
+#banner-message {
+  background: #fff;
+  border-radius: 4px;
+  padding: 20px;
+  font-size: 25px;
+  text-align: center;
+  transition: all 0.2s;
+  margin: 0 auto;
+  width: 300px;
+}
+
+button {
+  background: #0084ff;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 14px;
+  font-size: 15px;
+  color: #fff;
+}
+
+#banner-message.alt {
+  background: #0084ff;
+  color: #fff;
+  margin-top: 40px;
+  width: 200px;
+}
+
+#banner-message.alt button {
+  background: #fff;
+  color: #000;
+}
+
+
+
+/*
 other stuff
 @media {
   .ah-r {
@@ -345,16 +366,9 @@ other stuff
 
 */
 
-      /* @font-face {
-        font-family: "dyslexic";
-        src: url(https://github.com/PythonGithCode/fonts/raw/main/OpenDyslexic-Regular.ttf) format("truetype");
-      }
-      
-      .dis {
-        font-family: "dyslexic", Verdana, Tahoma;
-      } */
-
     </style>
+
+
 
     <!-- <link rel="stylesheet" href="https://opendyslexic.org/files/css/css_TCx_XEiAk351K0xYJfKNAVZwNewqENNciS4azCNnLDg.css" media="all">
     <link rel="stylesheet" href="https://opendyslexic.org/files/css/css_TBn-BjrCDi3jk3U9WMNARltRG_c22C5Art6X1mc8f5A.css" media="all">
@@ -383,19 +397,81 @@ other stuff
           <button id="findPlayer" class="ui-button">Find</button>
 
           <div>
-            <!-- <h3>
-              <span>Name:</span>
-              <span id="playerName">temp</span>
-            </h3> -->
+
             <div>
               <h4>Data:</h4>
               <textarea class="playerDataJson" id="playerDataJson"></textarea>
-              <!-- <pre class="playerDataJson" id="playerDataJson"></pre> -->
             </div>
+
             <div>
               <button class="ui-button" id="savePlayerData">Save Data</button>
               <p class="did-save"></p>
             </div>
+
+            <!-- <tabs>
+              <ul>
+                <li><a href="#tabs-1">player 1</a></li>
+                <li><a href="#tabs-2">player 2</a></li>
+                <li><a href="#tabs-3">player 3</a></li>
+              </ul>
+              
+              <div id="tabs-1">
+                <p>player 1.</p>
+              </div>
+              <div id="tabs-2">
+                <p>player 2</p>
+              </div>
+              <div id="tabs-3">
+                <p>player 3</p>
+              </div>
+            </tabs> -->
+            
+            <!--
+            js code
+$( "tabs" ).each(function() {
+    $( this ).each(function () {
+        let kids = $( this ).children();
+        let name = $( kids[0] ).text();
+        let data = $( kids[1] ).html();
+        // screw this thi might be made or not i have school work tomorrow
+        // so f this
+        // let idna = $( this ).prevObject();
+        
+
+        var stringBaseElement = "<li>";
+    
+        
+    
+        stringBaseElement += "</li>"
+    });
+});
+            -->
+            
+            <!-- findening a template for it -->
+            <tabs>
+            
+              <tab>
+                <name>
+                  dave
+                </name>
+                
+                <div>
+                  <p>
+                    text
+                  </p>           
+                </div>
+              </tab>
+              <tab>
+                <name>kad</name>
+                
+                <div>
+                  <p>
+                    text
+                  </p>           
+                </div>
+              </tab>
+              
+            </tabs>
           </div>
         </div>
 
@@ -439,65 +515,65 @@ other stuff
           People with dyslexia have a harding when learning a second Language.
           <br>
           This means that if someone you know has it might have had a harder time learn the language their taking.
-
-
+    
+    
         </p>
-
+    
         <br>
         <br>
         <br>
       </div>
-
+    
       <div>
-
+    
         <h1>
           Dyslexia
         </h1>
-
+    
         <hr>
-
+    
         <h3>
           Definition
         </h3>
         <h5>
           A condition of neurodevelopmental origin that mainly affects the ease with which a person reads, writes, and spells, typically recognized as a specific learning disorder in children.
         </h5>
-
+    
         <hr>
-
+    
         <h3>
           What is it?
         </h3>
-
+    
         <p>
           Dyslexia is a neurological condition that affects people's reading, speech, and learning.
         </p>
-
+    
         <div>
-
-          <div>
+    
+          <div class="">
             <p>20% of people have Dyslexia.</p>
             <img width="400" height="200" src="https://lh3.googleusercontent.com/u/0/drive-viewer/AFGJ81qT7xJXASmc9p9bBtcaDWswHXwxNyWPLfETLP26vFtuEW5IIGEe48xo1bL_i47Avki4HubDxvfJUfWYOS0808rlNXahwQ=w696-h624">
           </div>
-
+    
           <li>
             Language
             <span class="hiddenLater"><br> -
               Dyslexia makes it harder for people to learn a second language.
             </span>
           </li>
-
+    
           <br>
-
+    
           <li>
             Reading
             <span class="hiddenLater"><br> -
              It also makes it difficult to read which make's them slower readers.
             </span>
           </li>
-
+    
           <br>
-
+    
           <li>
             Intellect
             <span class="hiddenLater"><br> -
@@ -505,25 +581,31 @@ other stuff
             </span>
           </li>
         </div>
-
+    
         <br>
         <hr>
-
+    
         <h2>
           Famous people who have dealt with Dyslexia.
         </h2>
+        
         <div>
-          <h3>
-            Albert Einstein
-          </h3>
-          <img width=220 height=289 src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Einstein_1921_by_F_Schmutzer_-_restoration.jpg/330px-Einstein_1921_by_F_Schmutzer_-_restoration.jpg">
-          <p class="hiddenLater">
-            Though as a child and teenager, Albert Einstein had shown signs of weakness in speech and verbal development. “Words or language, as they are written or spoken, do not seem to play any role in my mechanism of thought,” he wrote to mathematician Jacques Hadamard in 1945.
-          </p>
+          <div class="container3">
+            <br>
+            <br>
+            <h3>
+              Albert Einstein
+            </h3>
+            <img class="container3" width=220 height=289 src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Einstein_1921_by_F_Schmutzer_-_restoration.jpg/330px-Einstein_1921_by_F_Schmutzer_-_restoration.jpg">
+            <p class="hiddenLater container3">
+              Though as a child and teenager, Albert Einstein had shown signs of weakness in speech and verbal development. “Words or language, as they are written or spoken, do not seem to play any role in my mechanism of thought,” he wrote to mathematician Jacques Hadamard in 1945.
+            </p>
+          </div>
         </div>
-
+        
+        <br>
         <hr>
-
+    
         <div>
           <h3>
             Richard Branson
@@ -533,9 +615,9 @@ other stuff
            Richard Branson, experience with dyslexia made him think in different ways which helped him in later life. “It is time we lost the stigma around dyslexia,” Branson said. “It is not a disadvantage; it is merely a different way of thinking.” “Once freed from archaic schooling practices and preconceptions, my mind opened up. Out in the real world, my dyslexia became my massive advantage: it helped me to think creatively and laterally, and see solutions where others saw problems.” He says he also wants to make sure that school today will have the tool to help people with dyslexia.
           </p>
         </div>
-
+    
         <hr>
-
+    
         <div>
           <h3>
             George Washington
@@ -545,10 +627,10 @@ other stuff
             George Washington had issues with grammar and reading likely from Dyslexia. So he made ways for him to understand it for himself.
           </p>
         </div>
-
-
+    
+    
         <hr>
-
+    
         <div>
           <h3>
             Henry Winkler
@@ -558,10 +640,10 @@ other stuff
             Henty Winkler said that Dyslexia made him not read but tell 31. When he was younger not a lot was known about Dyslexia which made it hard for him. “I learned to memorize as much as I could from any page and then improvise,” he said. Now he wants to make sure that people today in school should have tools to help them with Dyslexia.
           </p>
         </div>
-
-
+    
+    
         <hr>
-
+    
         <div>
           <h3>
             Octavia Spencer
@@ -571,17 +653,17 @@ other stuff
             When she was young she knew that she had trouble when she had to read aloud. “I was paralyzed with fear because I kept inverting words and dropping words,” she’s said. “I didn’t want to be made to feel that I was not as smart as the other kids — because I know that I am a smart person.” She is very proud of the fact she made 2 books when having to deal with dyslexia.
           </p>
         </div>
-
+    
       </div>
-
+    
       <hr>
-
+    
       <div>
-
+    
         <h2 class="dis">
           Tools to help people with dyslexia
         </h2>
-
+    
         <div>
           <p>
             As you have seen the font is not normal. This is because of the open dyslexic font. Frontpage, "... designed against some common symptoms of dyslexia. If you like the way you can read this page, and others, then this typeface is for you! OpenDyslexic is free to use ..."
@@ -603,10 +685,24 @@ other stuff
         </div>
       </div>
       
+      <hr>
+      
+      <div>
+        <h2>Ask me anything about Dyslexia</h2>
+        <p>
+          I'll probably give you an anwser. 
+          Also if your reading this then, yes i coded this all my self,
+          and there is more project useing the web in this project you you read the web site thing or what every.
+        </p>
+      </div>
+      
       <br>
       <br>
       <br>
       <br>
+      
+      <hr>
+      <h1 id="addPerSec">CITE</h1>
       <cite>
        Works Cited “12 Famous People Who Struggled with Dyslexia before Changing the World.” IMSE - Journal, 21 Nov. 2017, journal.imse.com/12-famous-people-who-struggled-with-dyslexia-before-changing-the-world/.“Home | OpenDyslexic.” Opendyslexic.org, opendyslexic.org/?utm_source=opendyslexic-chrome&utm_medium=referral. Accessed 24 May 2023.Mayo Clinic . “Dyslexia - Symptoms and Causes.” Mayo Clinic, 22 July 2017, www.mayoclinic.org/diseases-conditions/dyslexia/symptoms-causes/syc-20353552. Accessed 17 May 2023.Shaywitz, Sally. “Yale Dyslexia.” Yale Dyslexia, 2017, dyslexia.yale.edu/dyslexia/what-is-dyslexia/. Accessed 17 May 2023.
       </cite>
