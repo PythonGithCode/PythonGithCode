@@ -102,6 +102,21 @@ $(document).ready(function() {
     }
     console.log(logger() + "'" + linkStringId + "' has been disabled.");
   }
+  
+  // english project code
+  setInterval(function () {
+  	$( "#addPerSec" ).text($( "#addPerSec" ).text() + " CITE");
+  }, 1000);
+  
+  $( "#addPerSec" )
+  
+  
+  /// tabs code
+  
+  $( "tabs" ).each(function() {
+  	
+  	$( this ).tabs();
+  });
 
   //// localStroage code
   
